@@ -10,32 +10,41 @@
             @* YOUR NAME ------- *@
             <div class="d-flex justify-content-between w-75 mb-2">
                 <label asp-for="YourName">Your Name:</label>
-                <input type="text" asp-for="YourName">
+                <input type="text" asp-for="YourName" placeholder="Enter your name">
             </div>
+                <span asp-validation-for="YourName" class="text-danger"></span>
+
             @* DOJO LOCATION ------- *@
             <div class="d-flex justify-content-between  w-75 mb-2">
                 <label asp-for="DojoLocation">Dojo Location:</label>
                 <select asp-for="DojoLocation" id="dojoSelect">
+                    <option value="">Select Location</option>
                     <option value="Seattle">Seattle</option>
                     <option value="Denver">Denver</option>
                     <option value="LA">LA</option>
                     <option value="Phoenix">Phoenix</option>
                 </select>
             </div>
+                <span asp-validation-for="DojoLocation" class="text-danger"></span>
+
             @* FAVORITE LANGUAGE ------- *@
             <div class="d-flex justify-content-between w-75 mb-2">
                 <label asp-for="FavoriteLanguage">Favorite Language:</label>
                 <select asp-for="FavoriteLanguage" id="languageSelect">
+                    <option value="">Select a Language</option>
                     <option value="JS">JS</option>
                     <option value="C#">C#</option>
                     <option value="Python">Python</option>
                 </select>
             </div>
+                <span asp-validation-for="FavoriteLanguage" class="text-danger"></span>
+
             @* COMMENT (OPTIONAL) -------- *@
             <div class="d-flex justify-content-between w-75 mb-2">
                 <label asp-for="CommentOptional">Comment (optional):</label>
-                <textarea asp-for="CommentOptional" id="commentBox" cols="30" rows="10">Write comments here...</textarea>
+                <textarea asp-for="CommentOptional" id="commentBox" cols="30" rows="10" placeholder="Write comments here"></textarea>
             </div>
+                <span asp-validation-for="CommentOptional" class="text-danger"></span>
         <div><button type="submit" class="btn btn-outline-dark">Submit</button>  </div>
 
         </form>

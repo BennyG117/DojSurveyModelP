@@ -17,7 +17,8 @@ public class Survey
     
     [Required]
     public string FavoriteLanguage {get; set;}
-    
-    public string CommentOptional {get; set;}
+
+    [MinLength(20)]
+    public string? CommentOptional {get; set;}
 
 }
