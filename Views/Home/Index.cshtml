@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Complete the Survey";
+}
+
+@model Survey
+
+<div class="text-center">
+    <div class="">
+        <form asp-action="Create" as-controller="Home" method="post" class="d-flex flex-column align-items-start p-5 border border-dark rounded">
+            @* YOUR NAME ------- *@
+            <div class="d-flex justify-content-between w-75 mb-2">
+                <label asp-for="YourName">Your Name:</label>
+                <input type="text" asp-for="YourName">
+            </div>
+            @* DOJO LOCATION ------- *@
+            <div class="d-flex justify-content-between  w-75 mb-2">
+                <label asp-for="DojoLocation">Dojo Location:</label>
+                <select asp-for="DojoLocation" id="dojoSelect">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Denver">Denver</option>
+                    <option value="LA">LA</option>
+                    <option value="Phoenix">Phoenix</option>
+                </select>
+            </div>
+            @* FAVORITE LANGUAGE ------- *@
+            <div class="d-flex justify-content-between w-75 mb-2">
+                <label asp-for="FavoriteLanguage">Favorite Language:</label>
+                <select asp-for="FavoriteLanguage" id="languageSelect">
+                    <option value="JS">JS</option>
+                    <option value="C#">C#</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            @* COMMENT (OPTIONAL) -------- *@
+            <div class="d-flex justify-content-between w-75 mb-2">
+                <label asp-for="CommentOptional">Comment (optional):</label>
+                <textarea asp-for="CommentOptional" id="commentBox" cols="30" rows="10">Write comments here...</textarea>
+            </div>
+        <div><button type="submit" class="btn btn-outline-dark">Submit</button>  </div>
+
+        </form>
+    </div>   
+</div>

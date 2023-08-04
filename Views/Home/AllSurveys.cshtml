@@ -1,0 +1,21 @@
+
+
+@{
+    ViewData["Title"] = "Submitted Info";
+}
+
+@model List<Survey> 
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach(Survey s in Model)
+{
+    <br/>
+    <div class=" p-2 border rounded border-dark w-50">
+        <h2>Name: @s.YourName</h2>
+        <h5>Dojo Location: @s.DojoLocation</h5>
+        <h5>Favorite Language: @s.FavoriteLanguage</h5>
+        <h5>Comment (optional): @s.CommentOptional</h5>
+    </div>
+    <br/>
+}
